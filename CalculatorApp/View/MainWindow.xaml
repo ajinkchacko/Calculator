@@ -1,0 +1,140 @@
+﻿<Window x:Class="CalculatorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorApp"
+        mc:Ignorable="d"
+        Title="Calculator App" Height="450" Width="800">
+
+    <Grid>
+        
+        <TabControl>
+            <TabItem Header="Calculator One">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="5">
+
+                        <GroupBox Header=" Arithmetic mean of a list of numbers " 
+                                  Margin="5" BorderThickness="2">
+                            <StackPanel Margin="10" VerticalAlignment="Center">
+                                <TextBlock Text="Comma Seperated Numbers"></TextBlock>
+                                <TextBox x:Name="txtMeanNumbers" TextChanged="textBox_TextChanged"></TextBox>
+                                <Button x:Name="btnCalcMean" Click="btnCalcMean_Click"></Button>
+                                <TextBlock x:Name="txtMeanResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header=" Standard deviation for a list of numbers " 
+                                  Margin="5" BorderThickness="2">
+                            <StackPanel Margin="10" VerticalAlignment="Center">
+                                <TextBlock Text="Comma Seperated Numbers"></TextBlock>
+                                <TextBox x:Name="txtStdDeviationNumbers"></TextBox>
+                                <Button x:Name="btnCalcStdDeviation" Click="btnCalcStdDeviation_Click"></Button>
+                                <TextBlock x:Name="txtStdDeviationResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header=" Frequencies of numbers in bins of 10 " 
+                                  Margin="5" BorderThickness="2">
+                            <StackPanel Margin="10" VerticalAlignment="Center">
+                                <TextBlock Text="Comma Seperated Numbers"></TextBlock>
+                                <TextBox x:Name="txtFreqNumbers"></TextBox>
+                                <Button x:Name="btnCalcFreq" Click="btnCalcFreq_Click"></Button>
+                                <TextBlock x:Name="txtFreqResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header=" Square root of a number " 
+                                  Margin="5" BorderThickness="2">
+                            <StackPanel Margin="10" VerticalAlignment="Center">
+                                <TextBlock Text="Number"></TextBlock>
+                                <TextBox x:Name="txtSqrtNumber"></TextBox>
+                                <Button x:Name="btnCalcSqrt" Click="btnCalcSqrt_Click"></Button>
+                                <TextBlock x:Name="txtSqrtResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                            </StackPanel>
+                        </GroupBox>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="Calculator Two">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="5">
+
+                        <GroupBox Header=" Compound increase  " 
+                                  Margin="5" BorderThickness="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                            
+                            <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="10">
+                                <TextBlock Text="Value"></TextBlock>
+                                <TextBox x:Name="txtValueInc"></TextBox>
+                            </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10">
+                                    <TextBlock Text="Intrest"></TextBlock>
+                                    <TextBox x:Name="txtIntrestInc"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" Margin="10">
+                                    <TextBlock Text="Years"></TextBlock>
+                                    <TextBox x:Name="txtYearsInc"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,10">
+                                    <Button  x:Name="btnCalcCompInc" Click="btnCalcCompInc_Click"></Button>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Margin="5">
+                                    <TextBlock x:Name="txtCompIncResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                                </StackPanel>
+                            </Grid>
+                                
+                        </GroupBox>
+
+                        <GroupBox Header=" Compound decrease  " 
+                                  Margin="5" BorderThickness="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="10">
+                                    <TextBlock Text="Value"></TextBlock>
+                                    <TextBox x:Name="txtValueDec"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10">
+                                    <TextBlock Text="Intrest"></TextBlock>
+                                    <TextBox x:Name="txtIntrestDec"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" Margin="10">
+                                    <TextBlock Text="Years"></TextBlock>
+                                    <TextBox x:Name="txtYearsDec"></TextBox>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,10">
+                                    <Button  x:Name="btnCalcCompDec" Click="btnCalcCompDec_Click"></Button>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"  HorizontalAlignment="Left" Margin="5">
+                                    <TextBlock x:Name="txtCompDecResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                                </StackPanel>
+                            </Grid>
+
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>

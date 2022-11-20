@@ -33,7 +33,7 @@ namespace CalculatorOne
         {
             ValidateNumbers(numbers);
 
-            double mean = ArithmeticMean((List<double>)numbers);
+            double mean = numbers.Average();
 
             double sumSquaredDeviations = 0;
             foreach (var num in numbers)
@@ -43,7 +43,7 @@ namespace CalculatorOne
 
             double variance = sumSquaredDeviations / numbers.Count;
 
-            return SquareRoot(variance);
+            return Math.Sqrt(variance);
         }
 
         /// <summary>

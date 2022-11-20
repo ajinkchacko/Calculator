@@ -17,7 +17,7 @@
                         <GroupBox Header=" Arithmetic mean of a list of numbers " 
                                   Margin="5" BorderThickness="2">
                             <StackPanel Margin="10" VerticalAlignment="Center">
-                                <TextBlock Text="Comma Seperated Numbers"></TextBlock>
+                                <TextBlock Text="Comma Seperated Numbers (0-100)"></TextBlock>
                                 <TextBox x:Name="txtMeanNumbers" TextChanged="textBox_TextChanged"></TextBox>
                                 <Button x:Name="btnCalcMean" Click="btnCalcMean_Click"></Button>
                                 <TextBlock x:Name="txtMeanResult" FontSize="14" FontWeight="Medium"></TextBlock>
@@ -27,7 +27,7 @@
                         <GroupBox Header=" Standard deviation for a list of numbers " 
                                   Margin="5" BorderThickness="2">
                             <StackPanel Margin="10" VerticalAlignment="Center">
-                                <TextBlock Text="Comma Seperated Numbers"></TextBlock>
+                                <TextBlock Text="Comma Seperated Numbers (0-100)"></TextBlock>
                                 <TextBox x:Name="txtStdDeviationNumbers" TextChanged="textBox_TextChanged"></TextBox>
                                 <Button x:Name="btnCalcStdDeviation" Click="btnCalcStdDeviation_Click"></Button>
                                 <TextBlock x:Name="txtStdDeviationResult" FontSize="14" FontWeight="Medium"></TextBlock>
@@ -37,7 +37,7 @@
                         <GroupBox Header=" Frequencies of numbers in bins of 10 " 
                                   Margin="5" BorderThickness="2">
                             <StackPanel Margin="10" VerticalAlignment="Center">
-                                <TextBlock Text="Comma Seperated Numbers"></TextBlock>
+                                <TextBlock Text="Comma Seperated Numbers (0-100)"></TextBlock>
                                 <TextBox x:Name="txtFreqNumbers" TextChanged="textBox_TextChanged"></TextBox>
                                 <Button x:Name="btnCalcFreq" Click="btnCalcFreq_Click"></Button>
                                 <TextBlock x:Name="txtFreqResult" FontSize="14" FontWeight="Medium"></TextBlock>

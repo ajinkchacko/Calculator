@@ -28,7 +28,7 @@
                                   Margin="5" BorderThickness="2">
                             <StackPanel Margin="10" VerticalAlignment="Center">
                                 <TextBlock Text="Comma Seperated Numbers"></TextBlock>
-                                <TextBox x:Name="txtStdDeviationNumbers"></TextBox>
+                                <TextBox x:Name="txtStdDeviationNumbers" TextChanged="textBox_TextChanged"></TextBox>
                                 <Button x:Name="btnCalcStdDeviation" Click="btnCalcStdDeviation_Click"></Button>
                                 <TextBlock x:Name="txtStdDeviationResult" FontSize="14" FontWeight="Medium"></TextBlock>
                             </StackPanel>
@@ -38,9 +38,10 @@
                                   Margin="5" BorderThickness="2">
                             <StackPanel Margin="10" VerticalAlignment="Center">
                                 <TextBlock Text="Comma Seperated Numbers"></TextBlock>
-                                <TextBox x:Name="txtFreqNumbers"></TextBox>
+                                <TextBox x:Name="txtFreqNumbers" TextChanged="textBox_TextChanged"></TextBox>
                                 <Button x:Name="btnCalcFreq" Click="btnCalcFreq_Click"></Button>
                                 <TextBlock x:Name="txtFreqResult" FontSize="14" FontWeight="Medium"></TextBlock>
+                                <ListBox x:Name="listFreqResult" BorderThickness="0"></ListBox>
                             </StackPanel>
                         </GroupBox>
 
@@ -48,7 +49,7 @@
                                   Margin="5" BorderThickness="2">
                             <StackPanel Margin="10" VerticalAlignment="Center">
                                 <TextBlock Text="Number"></TextBlock>
-                                <TextBox x:Name="txtSqrtNumber"></TextBox>
+                                <TextBox x:Name="txtSqrtNumber" TextChanged="textBoxNumber_TextChanged"></TextBox>
                                 <Button x:Name="btnCalcSqrt" Click="btnCalcSqrt_Click"></Button>
                                 <TextBlock x:Name="txtSqrtResult" FontSize="14" FontWeight="Medium"></TextBlock>
                             </StackPanel>
@@ -77,15 +78,15 @@
                             
                             <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="10">
                                 <TextBlock Text="Value"></TextBlock>
-                                <TextBox x:Name="txtValueInc"></TextBox>
+                                    <TextBox x:Name="txtValueInc" TextChanged="textBoxNumber_TextChanged"></TextBox>
                             </StackPanel>
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10">
-                                    <TextBlock Text="Intrest"></TextBlock>
-                                    <TextBox x:Name="txtIntrestInc"></TextBox>
+                                    <TextBlock Text="Interest"></TextBlock>
+                                    <TextBox x:Name="txtInterestInc" TextChanged="textBoxNumber_TextChanged"></TextBox>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2" VerticalAlignment="Center" Margin="10">
                                     <TextBlock Text="Years"></TextBlock>
-                                    <TextBox x:Name="txtYearsInc"></TextBox>
+                                    <TextBox x:Name="txtYearsInc" TextChanged="textBoxNumber_TextChanged"></TextBox>
                                 </StackPanel>
                                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,10">
                                     <Button  x:Name="btnCalcCompInc" Click="btnCalcCompInc_Click"></Button>
@@ -112,15 +113,15 @@
 
                                 <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="10">
                                     <TextBlock Text="Value"></TextBlock>
-                                    <TextBox x:Name="txtValueDec"></TextBox>
+                                    <TextBox x:Name="txtValueDec" TextChanged="textBoxNumber_TextChanged"></TextBox>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10">
-                                    <TextBlock Text="Intrest"></TextBlock>
-                                    <TextBox x:Name="txtIntrestDec"></TextBox>
+                                    <TextBlock Text="Interest"></TextBlock>
+                                    <TextBox x:Name="txtInterestDec" TextChanged="textBoxNumber_TextChanged"></TextBox>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2" VerticalAlignment="Center" Margin="10">
                                     <TextBlock Text="Years"></TextBlock>
-                                    <TextBox x:Name="txtYearsDec"></TextBox>
+                                    <TextBox x:Name="txtYearsDec" TextChanged="textBoxNumber_TextChanged"></TextBox>
                                 </StackPanel>
                                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,10">
                                     <Button  x:Name="btnCalcCompDec" Click="btnCalcCompDec_Click"></Button>
